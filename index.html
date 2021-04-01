@@ -33,7 +33,7 @@
                 <div class="mt-1">
                     <label>Speed</label>
                     <ul class="inline-block">
-                        <template x-for="speed in [1, 3, 5, 7, 9, 11]" :key="speed">
+                        <template x-for="speed in [280, 400, 5, 7, 9, 11]" :key="speed">
                             <li :class="[ 'inline-block cursor-pointer px-2 rounded mr-1 text-sm', cursorSpeed == speed ? 'bg-orange-700 text-white' : 'bg-orange-400 text-orange-900' ]" @click="cursorSpeed = speed" x-text="speed"></li>
                         </template>
                     </ul>
@@ -41,7 +41,7 @@
                 <div class="mt-1">
                     <label>Checkpoint Width</label>
                     <ul class="inline-block">
-                        <template x-for="width in [20, 15, 10, 5, 1]" :key="width">
+                        <template x-for="width in [10, 15, 10, 5, 1]" :key="width">
                             <li :class="[ 'inline-block cursor-pointer px-2 rounded mr-1 text-sm', checkpointWidth == width ? 'bg-orange-700 text-white' : 'bg-orange-400 text-orange-900' ]" @click="checkpointWidth = width" x-text="width"></li>
                         </template>
                     </ul>
@@ -68,6 +68,7 @@
     <script type="module" src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.min.js" defer></script>
     
+    <script src="assets/js/round.js"></script>
     <script src="assets/js/bar.js"></script>
     <script src="assets/js/cursor.js"></script>
     <script src="assets/js/checkpoint.js"></script>

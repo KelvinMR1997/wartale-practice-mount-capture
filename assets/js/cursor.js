@@ -34,7 +34,11 @@ function Cursor(config = {}) {
 
         ctx.fill()
     }
-    
+
+    this.pixelPerSec = function () {
+      return this.speed / 60
+    }
+
     this.hit = function () {
         this.hits.push(this.value)
     }
@@ -50,7 +54,7 @@ function Cursor(config = {}) {
             this.direction = 1
         }
         
-        this.value = Math.min(this.bar.width, Math.max(0, this.value + this.speed * this.direction)) 
+        this.value = Math.min(this.bar.width, Math.max(0, this.value + this.pixelPerSec() * this.direction)) 
     }
 
     this.setSpeed = function(value) {

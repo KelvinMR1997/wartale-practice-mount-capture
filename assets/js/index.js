@@ -12,7 +12,7 @@ window.requestAnimFrame = (function() {
 window.cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
 
 function game() {
-    const barWidth = 250;
+    const barWidth = 212;
     const barHeight = 30;
     let wins = 0;
     let loses = 0;
