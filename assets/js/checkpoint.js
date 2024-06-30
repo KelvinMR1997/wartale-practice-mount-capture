@@ -1,4 +1,5 @@
 function Checkpoint(config = {}) {
+    this.color = 'cyan',
     this.offset,
     this.width,
     this.bar,
@@ -8,7 +9,6 @@ function Checkpoint(config = {}) {
         this.offset = 0,
         this.width = this.config.width || 20;
         this.bar = this.config.bar
-        this.color = 'green'
     }
 
     this.reset()
@@ -26,12 +26,16 @@ function Checkpoint(config = {}) {
         this.width = value
     }
 
+    this.setColor = function(color) {
+        this.color = color;
+    }
+
     this.draw = function(ctx) {
         ctx.beginPath();
         ctx.rect(10 + this.offset, 0, this.width, this.bar.height);
-        ctx.fillStyle = "cyan";
+        ctx.fillStyle = this.color;
         ctx.fill()
-        ctx.strokeStyle = "cyan";
+        ctx.strokeStyle = this.color;
         ctx.stroke();
     }
 }

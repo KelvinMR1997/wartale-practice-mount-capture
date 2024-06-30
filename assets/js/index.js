@@ -36,9 +36,11 @@ function game() {
             if(e.keyCode == 32) {
                 cursor.hit()
                 if(checkpoint.checkWin(cursor.lastHit())) {
+                    checkpoint.setColor('#16FF0F');
                     this.wins++
                     checkpoint.getRandomPosition()
                 } else {
+                    checkpoint.setColor('#FF0000');
                     this.loses++
                 }
             }
