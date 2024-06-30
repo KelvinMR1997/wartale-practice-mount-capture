@@ -8,6 +8,7 @@ function Checkpoint(config = {}) {
         this.offset = 0,
         this.width = this.config.width || 20;
         this.bar = this.config.bar
+        this.color = 'green'
     }
 
     this.reset()
